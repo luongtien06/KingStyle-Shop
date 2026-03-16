@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.jpg">
+    <title>Đăng Nhập & Đăng Ký</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #fdf2b1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.container {
+    width: 100%;
+    max-width: 900px;
+    min-height: 550px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.form-container {
+    flex: 1;
+    padding: 40px;
+    transition: all 0.5s ease;
+    position: relative;
+}
+.image-container {
+    flex: 1;
+    background-color: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/api/placeholder/600/900');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+}
+.image-text {
+    position: relative;
+    z-index: 1;
+    color: #f5f2ea;
+    text-align: center;
+    padding: 30px;
+}
+.image-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #d4af37;
+}
+.image-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+.form-header p {
+    color: #666;
+    font-size: 1rem;
+}
+.input-group {
+    margin-bottom: 20px;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.input-group input:focus {
+    border-color: #d4af37;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+    outline: none;
+}
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #1a1a1a;
+    color: #f5f2ea;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.submit-btn:hover {
+    background-color: #333;
+}
+.submit-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #d4af37;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+.submit-btn:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.switch-form {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #666;
+}
+.switch-form a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+.switch-form a:hover {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+.social-login {
+    margin-top: 30px;
+    text-align: center;
+}
+.social-login p {
+    position: relative;
+    margin-bottom: 15px;
+    color: #666;
+}
+.social-login p::before,
+.social-login p::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background-color: #e0e0e0;
+    top: 50%;
+}
+.social-login p::before {
+    left: 0;
+}
+.social-login p::after {
+    right: 0;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+.social-icon:hover {
+    background-color: #1a1a1a;
+    color: #f5f2ea;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+#login-form, #register-form {
+    display: none;
+}
+#login-form.active, #register-form.active {
+    display: block;
+}
+.fa {
+    font-weight: bold;
+    font-style: normal;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .image-container {
+        min-height: 250px;
+    }
+    .form-container {
+        padding: 30px 20px;
+    }
+}
+@media (max-width: 480px) {
+    .form-header h2 {
+        font-size: 1.7rem;
+    }
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+.remember-me input {
+    margin-right: 8px;
+    width: auto;
+}
+.forgot-password {
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+.forgot-password:hover {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+.form-container.slide-up {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+.form-container.slide-down {
+    transform: translateY(100%);
+    opacity: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div id="login-form" class="active">
+                <div class="form-header">
+                    <h2>Đăng Nhập</h2>
+                    <p>Chào mừng quý khách!</p>
+                </div>
+                <form>
+                    <div class="input-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="Nhập email của bạn" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Mật khẩu</label>
+                        <input type="password" id="login-password" placeholder="Nhập mật khẩu" required>
+                    </div>
+                    <div class="remember-forgot">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Ghi nhớ đăng nhập</label>
+                        </div>
+                        <a href="#" class="forgot-password">Quên mật khẩu?</a>
+                    </div>
+                    <button type="submit" class="submit-btn">Đăng Nhập</button>
+                </form>
+                <div class="switch-form">
+                    <span>Chưa có tài khoản?</span>
+                    <a href="#" onclick="toggleForm('register')">Đăng ký ngay</a>
+                </div>
+                <div class="social-login">
+                    <p>Hoặc đăng nhập với</p>
+                    <div class="social-icons">
+                        <div class="social-icon"><span class="fa">f</span></div>
+                        <div class="social-icon"><span class="fa">G</span></div>
+                        <div class="social-icon"><span class="fa">in</span></div>
+                    </div>
+                </div>
+            </div>
+            <div id="register-form">
+                <div class="form-header">
+                    <h2>Đăng Ký</h2>
+                    <p>Tạo tài khoản mới</p>
+                </div>
+                <form>
+                    <div class="input-group">
+                        <label for="register-name">Họ và tên</label>
+                        <input type="text" id="register-name" placeholder="Nhập họ tên của bạn" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" placeholder="Nhập email của bạn" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-password">Mật khẩu</label>
+                        <input type="password" id="register-password" placeholder="Tạo mật khẩu mới" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="register-confirm-password">Xác nhận mật khẩu</label>
+                        <input type="password" id="register-confirm-password" placeholder="Nhập lại mật khẩu" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Đăng Ký</button>
+                </form>
+                <div class="switch-form">
+                    <span>Đã có tài khoản?</span>
+                    <a href="#" onclick="toggleForm('login')">Đăng nhập</a>
+                </div>
+                <div class="social-login">
+                    <p>Hoặc đăng ký với</p>
+                    <div class="social-icons">
+                        <div class="social-icon"><span class="fa">f</span></div>
+                        <div class="social-icon"><span class="fa">G</span></div>
+                        <div class="social-icon"><span class="fa">in</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <div class="image-text">
+                <h2>Chào Mừng</h2>
+                <p>Đăng nhập để trải nghiệm sản phẩm và dịch vụ chất lượng cao với trải nghiệm tuyệt vời nhất.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(formType) {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            
+            if (formType === 'register') {
+                loginForm.classList.remove('active');
+                registerForm.classList.add('active');
+            } else {
+                registerForm.classList.remove('active');
+                loginForm.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

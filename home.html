@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="King Style - Thời trang đỉnh cao, phong cách hoàng gia">
+<meta name="keywords" content="thời trang, quần áo, phụ kiện, king style">
+<title>King Style - Thời trang đỉnh cao</title>
+<link rel="icon" href="images/logo.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="name">
+    <img src="images/logo.jpg" alt="King Style logo" width="45" height="45">
+    King Style
+  </div>
+  <div class="user-icons">
+    <a href="Giohang.html"><i class="fas fa-shopping-cart"></i> Giỏ hàng (<span id="cart-item-count">0</span>)</a>
+    <a href="DN&DK.html"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a class="checked" href="#">Trang chủ</a>
+  <a href="TTnam.html">Thời trang Nam</a>
+  <a href="TTnu.html">Thời trang Nữ</a>
+  <a href="Giaydep.html">Giày &amp; Dép</a>
+  <a href="Phukien.html">Phụ kiện &amp; Trang sức</a>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Phong cách hoàng gia - Thời trang đỉnh cao</h2>
+    <p>Khám phá bộ sưu tập mới nhất - Sang trọng và đẳng cấp.</p>
+  </section>
+
+  <!-- GỢI Ý HÔM NAY -->
+  <section class="daily-suggestion">
+    <h2>🎯 Gợi ý hôm nay</h2>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab(event,'new')">Hàng mới</button>
+      <button class="tab-btn"        onclick="showTab(event,'sale')">Giá tốt</button>
+    </div>
+
+    <!-- TAB: HÀNG MỚI -->
+    <div class="tab-content active" id="tab-new">
+      <div class="product-grid">
+
+        <div class="product-card">
+          <img src="images/toongg.jpg" alt="Dép tổ ong Vàng Ròng" loading="lazy">
+          <div class="product-info">
+            <h3>Tổ Ong Vàng Ròng</h3>
+            <p class="product-new">1.599.999.000₫</p>
+            <a class="product-button" href="#"
+               data-id="dep_to_ong_vang_rong" data-name="Dép tổ ong Vàng Ròng"
+               data-price="1599999000" data-image="images/toongg.jpg">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge-sale">-30%</div>
+          <img src="images/theuhoa.png" alt="Đầm Hoa" loading="lazy">
+          <div class="product-info">
+            <h3>Đầm Hoa</h3>
+            <p class="product-old"><s>700.000₫</s></p>
+            <p class="product-new">490.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="sn-s-dam_hoa"  name="size-dam_hoa" value="S"> <label for="sn-s-dam_hoa">S</label>
+              <input type="radio" id="sn-m-dam_hoa"  name="size-dam_hoa" value="M" checked> <label for="sn-m-dam_hoa">M</label>
+              <input type="radio" id="sn-l-dam_hoa"  name="size-dam_hoa" value="L"> <label for="sn-l-dam_hoa">L</label>
+              <input type="radio" id="sn-xl-dam_hoa" name="size-dam_hoa" value="XL"> <label for="sn-xl-dam_hoa">XL</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="dam_hoa" data-name="Đầm Hoa"
+               data-price="490000" data-image="images/theuhoa.png">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge-sale">-30%</div>
+          <img src="images/balonam.png" alt="Balo Nam" loading="lazy">
+          <div class="product-info">
+            <h3>Balo Nam</h3>
+            <p class="product-old"><s>650.000₫</s></p>
+            <p class="product-new">455.000₫</p>
+            <a class="product-button" href="#"
+               data-id="balo_nam" data-name="Balo Nam"
+               data-price="455000" data-image="images/balonam.png">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge-sale">-20%</div>
+          <img src="images/Giaynike.jpg" alt="Giày Thể Thao Nike" loading="lazy">
+          <div class="product-info">
+            <h3>Giày Thể Thao Nike</h3>
+            <p class="product-old"><s>2.599.000₫</s></p>
+            <p class="product-new">2.080.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="sn-38-giay_nike" name="size-giay_nike" value="38"> <label for="sn-38-giay_nike">38</label>
+              <input type="radio" id="sn-39-giay_nike" name="size-giay_nike" value="39"> <label for="sn-39-giay_nike">39</label>
+              <input type="radio" id="sn-40-giay_nike" name="size-giay_nike" value="40" checked> <label for="sn-40-giay_nike">40</label>
+              <input type="radio" id="sn-41-giay_nike" name="size-giay_nike" value="41"> <label for="sn-41-giay_nike">41</label>
+              <input type="radio" id="sn-42-giay_nike" name="size-giay_nike" value="42"> <label for="sn-42-giay_nike">42</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="giay_the_thao_nike" data-name="Giày Thể Thao Nike"
+               data-price="2080000" data-image="images/Giaynike.jpg">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge-sale">-30%</div>
+          <img src="images/nonthethao.jpg" alt="Nón Thể Thao" loading="lazy">
+          <div class="product-info">
+            <h3>Nón Thể Thao</h3>
+            <p class="product-old"><s>99.000₫</s></p>
+            <p class="product-new">69.000₫</p>
+            <a class="product-button" href="#"
+               data-id="non_the_thao" data-name="Nón Thể Thao"
+               data-price="69000" data-image="images/nonthethao.jpg">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge-sale">-10%</div>
+          <img src="images/Aokhoacadidas.webp" alt="Áo Khoác Adidas" loading="lazy">
+          <div class="product-info">
+            <h3>Áo Khoác Adidas</h3>
+            <p class="product-old"><s>1.299.000₫</s></p>
+            <p class="product-new">1.199.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="sn-s-adidas"  name="size-ao_khoac_adidas" value="S"> <label for="sn-s-adidas">S</label>
+              <input type="radio" id="sn-m-adidas"  name="size-ao_khoac_adidas" value="M" checked> <label for="sn-m-adidas">M</label>
+              <input type="radio" id="sn-l-adidas"  name="size-ao_khoac_adidas" value="L"> <label for="sn-l-adidas">L</label>
+              <input type="radio" id="sn-xl-adidas" name="size-ao_khoac_adidas" value="XL"> <label for="sn-xl-adidas">XL</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="ao_khoac_adidas" data-name="Áo Khoác Adidas"
+               data-price="1199000" data-image="images/Aokhoacadidas.webp">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge-sale">-25%</div>
+          <img src="images/Vinam.jpg" alt="Ví Nam" loading="lazy">
+          <div class="product-info">
+            <h3>Ví Nam</h3>
+            <p class="product-old"><s>799.000₫</s></p>
+            <p class="product-new">599.000₫</p>
+            <a class="product-button" href="#"
+               data-id="vi_nam" data-name="Ví Nam"
+               data-price="599000" data-image="images/Vinam.jpg">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge-sale">-25%</div>
+          <img src="images/Quanjean.webp" alt="Quần Jean" loading="lazy">
+          <div class="product-info">
+            <h3>Quần Jean</h3>
+            <p class="product-old"><s>699.000₫</s></p>
+            <p class="product-new">599.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="sn-s-jean"  name="size-quan_jean" value="S"> <label for="sn-s-jean">S</label>
+              <input type="radio" id="sn-m-jean"  name="size-quan_jean" value="M" checked> <label for="sn-m-jean">M</label>
+              <input type="radio" id="sn-l-jean"  name="size-quan_jean" value="L"> <label for="sn-l-jean">L</label>
+              <input type="radio" id="sn-xl-jean" name="size-quan_jean" value="XL"> <label for="sn-xl-jean">XL</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="quan_jean" data-name="Quần Jean"
+               data-price="599000" data-image="images/Quanjean.webp">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /tab-new -->
+
+    <!-- TAB: GIÁ TỐT -->
+    <div class="tab-content" id="tab-sale">
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="badge-sale">-50%</div>
+          <img src="images/Aopoloevisu.jpeg" alt="Áo Polo Evisu" loading="lazy">
+          <div class="product-info">
+            <h3>Áo Polo Evisu</h3>
+            <p class="product-old"><s>799.000₫</s></p>
+            <p class="product-new">400.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="ss-s-evisu"  name="size-ao_polo_evisu" value="S"> <label for="ss-s-evisu">S</label>
+              <input type="radio" id="ss-m-evisu"  name="size-ao_polo_evisu" value="M" checked> <label for="ss-m-evisu">M</label>
+              <input type="radio" id="ss-l-evisu"  name="size-ao_polo_evisu" value="L"> <label for="ss-l-evisu">L</label>
+              <input type="radio" id="ss-xl-evisu" name="size-ao_polo_evisu" value="XL"> <label for="ss-xl-evisu">XL</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="ao_polo_evisu" data-name="Áo Polo Evisu"
+               data-price="400000" data-image="images/Aopoloevisu.jpeg">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge-sale">-40%</div>
+          <img src="images/vayhanfu.avif" alt="Váy Hanfu" loading="lazy">
+          <div class="product-info">
+            <h3>Váy Hanfu</h3>
+            <p class="product-old"><s>1.699.000₫</s></p>
+            <p class="product-new">1.020.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="ss-s-hanfu" name="size-vay_hanfu" value="S"> <label for="ss-s-hanfu">S</label>
+              <input type="radio" id="ss-m-hanfu" name="size-vay_hanfu" value="M" checked> <label for="ss-m-hanfu">M</label>
+              <input type="radio" id="ss-l-hanfu" name="size-vay_hanfu" value="L"> <label for="ss-l-hanfu">L</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="vay_hanfu" data-name="Váy Hanfu"
+               data-price="1020000" data-image="images/vayhanfu.avif">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge-sale">-30%</div>
+          <img src="images/tuinu.jpg" alt="Túi Xách Nữ" loading="lazy">
+          <div class="product-info">
+            <h3>Túi Xách Nữ</h3>
+            <p class="product-old"><s>1.700.000₫</s></p>
+            <p class="product-new">1.190.000₫</p>
+            <a class="product-button" href="#"
+               data-id="tui_xach_nu" data-name="Túi Xách Nữ"
+               data-price="1190000" data-image="images/tuinu.jpg">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge-sale">-35%</div>
+          <img src="images/QuanTay.jpg" alt="Quần Tây Nam" loading="lazy">
+          <div class="product-info">
+            <h3>Quần Tây Nam</h3>
+            <p class="product-old"><s>550.000₫</s></p>
+            <p class="product-new">300.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="ss-s-quantay"  name="size-quan_tay_nam" value="S"> <label for="ss-s-quantay">S</label>
+              <input type="radio" id="ss-m-quantay"  name="size-quan_tay_nam" value="M" checked> <label for="ss-m-quantay">M</label>
+              <input type="radio" id="ss-l-quantay"  name="size-quan_tay_nam" value="L"> <label for="ss-l-quantay">L</label>
+              <input type="radio" id="ss-xl-quantay" name="size-quan_tay_nam" value="XL"> <label for="ss-xl-quantay">XL</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="quan_tay_nam" data-name="Quần Tây Nam"
+               data-price="300000" data-image="images/QuanTay.jpg">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge-sale">-20%</div>
+          <img src="images/aoblazerden.jpg" alt="Áo Khoác Nữ" loading="lazy">
+          <div class="product-info">
+            <h3>Áo Khoác Nữ</h3>
+            <p class="product-old"><s>2.899.000₫</s></p>
+            <p class="product-new">2.320.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="ss-s-khoacnu" name="size-ao_khoac_nu" value="S"> <label for="ss-s-khoacnu">S</label>
+              <input type="radio" id="ss-m-khoacnu" name="size-ao_khoac_nu" value="M" checked> <label for="ss-m-khoacnu">M</label>
+              <input type="radio" id="ss-l-khoacnu" name="size-ao_khoac_nu" value="L"> <label for="ss-l-khoacnu">L</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="ao_khoac_nu" data-name="Áo Khoác Nữ"
+               data-price="2320000" data-image="images/aoblazerden.jpg">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge-sale">-35%</div>
+          <img src="images/depleadidas.jpg" alt="Dép Lê Nam" loading="lazy">
+          <div class="product-info">
+            <h3>Dép Lê Nam</h3>
+            <p class="product-old"><s>359.000₫</s></p>
+            <p class="product-new">235.000₫</p>
+            <a class="product-button" href="#"
+               data-id="dep_le_nam" data-name="Dép Lê Nam"
+               data-price="235000" data-image="images/depleadidas.jpg">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge-sale">-30%</div>
+          <img src="images/donghonam.jpg" alt="Đồng Hồ Nam" loading="lazy">
+          <div class="product-info">
+            <h3>Đồng Hồ Nam</h3>
+            <p class="product-old"><s>3.000.000₫</s></p>
+            <p class="product-new">2.100.000₫</p>
+            <a class="product-button" href="#"
+               data-id="dong_ho_nam" data-name="Đồng Hồ Nam"
+               data-price="2100000" data-image="images/donghonam.jpg">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge-sale">-60%</div>
+          <img src="images/aolen.webp" alt="Áo Len Nữ tay dài" loading="lazy">
+          <div class="product-info">
+            <h3>Áo Len Nữ Tay Dài</h3>
+            <p class="product-old"><s>799.000₫</s></p>
+            <p class="product-new">320.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="ss-s-lennu" name="size-ao_len_nu" value="S"> <label for="ss-s-lennu">S</label>
+              <input type="radio" id="ss-m-lennu" name="size-ao_len_nu" value="M" checked> <label for="ss-m-lennu">M</label>
+              <input type="radio" id="ss-l-lennu" name="size-ao_len_nu" value="L"> <label for="ss-l-lennu">L</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="ao_len_nu" data-name="Áo Len Nữ tay dài"
+               data-price="320000" data-image="images/aolen.webp">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /tab-sale -->
+  </section>
+
+  <!-- BỘ SƯU TẬP NAM -->
+  <section class="mens-collection">
+    <div class="section-header">
+      <div class="header-line"></div>
+      <h2>BỘ SƯU TẬP NAM</h2>
+      <div class="header-line"></div>
+    </div>
+    <div class="products-container">
+      <div class="product-row">
+
+        <div class="product-card">
+          <span class="discount-tag">-22%</span>
+          <img src="images/aopolonamngantay.png" alt="Áo len polo tay ngắn" loading="lazy">
+          <div class="color-options">
+            <div class="color-option" style="background:#E8D6C0"></div>
+            <div class="color-option" style="background:#1A2B52"></div>
+            <div class="color-option" style="background:#333"></div>
+          </div>
+          <div class="product-info">
+            <h3>Áo len polo tay ngắn</h3>
+            <p class="product-code">ND12234</p>
+            <p class="product-old"><s>899.000₫</s></p>
+            <p class="product-new">699.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="nm-s-polo" name="size-ao_len_polo_nam" value="S"> <label for="nm-s-polo">S</label>
+              <input type="radio" id="nm-m-polo" name="size-ao_len_polo_nam" value="M" checked> <label for="nm-m-polo">M</label>
+              <input type="radio" id="nm-l-polo" name="size-ao_len_polo_nam" value="L"> <label for="nm-l-polo">L</label>
+              <input type="radio" id="nm-xl-polo" name="size-ao_len_polo_nam" value="XL"> <label for="nm-xl-polo">XL</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="ao_len_polo_nam" data-name="Áo len polo tay ngắn"
+               data-price="699000" data-image="images/aopolonamngantay.png">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <span class="discount-tag">-25%</span>
+          <img src="images/sominamcotton.png" alt="Áo sơ mi cotton tay dài" loading="lazy">
+          <div class="color-options">
+            <div class="color-option" style="background:#add8e6"></div>
+            <div class="color-option" style="background:#00008b"></div>
+            <div class="color-option" style="background:#fff;border-color:#ccc"></div>
+          </div>
+          <div class="product-info">
+            <h3>Áo sơ mi cotton tay dài</h3>
+            <p class="product-code">ND54767</p>
+            <p class="product-old"><s>799.000₫</s></p>
+            <p class="product-new">599.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="nm-s-somi" name="size-ao_so_mi_cotton_nam" value="S"> <label for="nm-s-somi">S</label>
+              <input type="radio" id="nm-m-somi" name="size-ao_so_mi_cotton_nam" value="M" checked> <label for="nm-m-somi">M</label>
+              <input type="radio" id="nm-l-somi" name="size-ao_so_mi_cotton_nam" value="L"> <label for="nm-l-somi">L</label>
+              <input type="radio" id="nm-xl-somi" name="size-ao_so_mi_cotton_nam" value="XL"> <label for="nm-xl-somi">XL</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="ao_so_mi_cotton_nam" data-name="Áo sơ mi cotton tay dài"
+               data-price="599000" data-image="images/sominamcotton.png">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <span class="discount-tag">-22%</span>
+          <img src="images/aosominamdaitay.png" alt="Áo sơ mi suông tay dài" loading="lazy">
+          <div class="color-options">
+            <div class="color-option" style="background:#add8e6"></div>
+            <div class="color-option" style="background:#333"></div>
+          </div>
+          <div class="product-info">
+            <h3>Áo sơ mi suông tay dài</h3>
+            <p class="product-code">ND23462</p>
+            <p class="product-old"><s>899.000₫</s></p>
+            <p class="product-new">699.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="nm-s-suong" name="size-ao_so_mi_suong_nam" value="S"> <label for="nm-s-suong">S</label>
+              <input type="radio" id="nm-m-suong" name="size-ao_so_mi_suong_nam" value="M" checked> <label for="nm-m-suong">M</label>
+              <input type="radio" id="nm-l-suong" name="size-ao_so_mi_suong_nam" value="L"> <label for="nm-l-suong">L</label>
+              <input type="radio" id="nm-xl-suong" name="size-ao_so_mi_suong_nam" value="XL"> <label for="nm-xl-suong">XL</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="ao_so_mi_suong_nam" data-name="Áo sơ mi suông tay dài"
+               data-price="699000" data-image="images/aosominamdaitay.png">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card banner-card">
+          <img src="images/bosuutapnam.png" alt="Bộ sưu tập Nam" loading="lazy">
+        </div>
+
+      </div>
+    </div>
+    <div class="view-all-container">
+      <a href="TTnam.html" class="view-all-btn">XEM TẤT CẢ <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- BỘ SƯU TẬP NỮ -->
+  <section class="womens-collection">
+    <div class="section-header">
+      <div class="header-line"></div>
+      <h2>BỘ SƯU TẬP NỮ</h2>
+      <div class="header-line"></div>
+    </div>
+    <div class="products-container">
+      <div class="product-row">
+
+        <div class="product-card">
+          <span class="discount-tag">-20%</span>
+          <img src="images/theuhoa.png" alt="Váy thêu hoa" loading="lazy">
+          <div class="color-options">
+            <div class="color-option" style="background:#f5f0e8"></div>
+            <div class="color-option" style="background:#ffb6c1"></div>
+            <div class="color-option" style="background:#333"></div>
+          </div>
+          <div class="product-info">
+            <h3>Váy thêu hoa</h3>
+            <p class="product-code">ND78354</p>
+            <p class="product-old"><s>999.000₫</s></p>
+            <p class="product-new">799.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="nu-s-theu" name="size-vay_theu_hoa" value="S"> <label for="nu-s-theu">S</label>
+              <input type="radio" id="nu-m-theu" name="size-vay_theu_hoa" value="M" checked> <label for="nu-m-theu">M</label>
+              <input type="radio" id="nu-l-theu" name="size-vay_theu_hoa" value="L"> <label for="nu-l-theu">L</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="vay_theu_hoa" data-name="Váy thêu hoa"
+               data-price="799000" data-image="images/theuhoa.png">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <span class="discount-tag">-15%</span>
+          <img src="images/nucotton.png" alt="Áo váy cotton" loading="lazy">
+          <div class="color-options">
+            <div class="color-option" style="background:#add8e6"></div>
+            <div class="color-option" style="background:#ff69b4"></div>
+            <div class="color-option" style="background:#fff;border-color:#ccc"></div>
+          </div>
+          <div class="product-info">
+            <h3>Áo váy cotton</h3>
+            <p class="product-code">ND25346</p>
+            <p class="product-old"><s>589.000₫</s></p>
+            <p class="product-new">499.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="nu-s-cotton" name="size-ao_vay_cotton_nu" value="S"> <label for="nu-s-cotton">S</label>
+              <input type="radio" id="nu-m-cotton" name="size-ao_vay_cotton_nu" value="M" checked> <label for="nu-m-cotton">M</label>
+              <input type="radio" id="nu-l-cotton" name="size-ao_vay_cotton_nu" value="L"> <label for="nu-l-cotton">L</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="ao_vay_cotton_nu" data-name="Áo váy cotton"
+               data-price="499000" data-image="images/nucotton.png">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <span class="discount-tag">-30%</span>
+          <img src="images/vaythusin.png" alt="Váy thư sinh" loading="lazy">
+          <div class="color-options">
+            <div class="color-option" style="background:goldenrod"></div>
+            <div class="color-option" style="background:#333"></div>
+          </div>
+          <div class="product-info">
+            <h3>Váy thư sinh</h3>
+            <p class="product-code">ND68534</p>
+            <p class="product-old"><s>999.000₫</s></p>
+            <p class="product-new">699.000₫</p>
+            <div class="product-sizes">
+              <input type="radio" id="nu-s-thu" name="size-vay_thu_sinh" value="S"> <label for="nu-s-thu">S</label>
+              <input type="radio" id="nu-m-thu" name="size-vay_thu_sinh" value="M" checked> <label for="nu-m-thu">M</label>
+              <input type="radio" id="nu-l-thu" name="size-vay_thu_sinh" value="L"> <label for="nu-l-thu">L</label>
+            </div>
+            <a class="product-button" href="#"
+               data-id="vay_thu_sinh" data-name="Váy thư sinh"
+               data-price="699000" data-image="images/vaythusin.png">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+
+        <div class="product-card banner-card">
+          <img src="images/bosuutapnu.png" alt="Bộ sưu tập Nữ" loading="lazy">
+        </div>
+
+      </div>
+    </div>
+    <div class="view-all-container">
+      <a href="TTnu.html" class="view-all-btn">XEM TẤT CẢ <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- ĐÁNH GIÁ -->
+  <section class="customer-reviews">
+    <h2>Khách hàng nói gì về King Style</h2>
+    <div class="reviews-container">
+      <div class="review">
+        <h4>Nguyễn Minh</h4>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Dịch vụ tuyệt vời, quần áo đẹp và chất lượng. Sẽ ủng hộ dài lâu!"</p>
+      </div>
+      <div class="review">
+        <h4>Trần Hương</h4>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Giao hàng nhanh, đóng gói cẩn thận. Sản phẩm giống y hình."</p>
+      </div>
+      <div class="review">
+        <h4>Lê Thành</h4>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Mình đã mua nhiều lần và lần nào cũng hài lòng. Rất đáng tiền!"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIN TỨC -->
+  <section class="fashion-news">
+    <h2>Tin tức thời trang</h2>
+    <div class="news-list">
+      <div class="news-item">
+        <img src="images/phoido.png" alt="Xu hướng hè 2025" loading="lazy">
+        <div class="news-content">
+          <h4>🌞 Xu hướng hè 2025: Đơn giản mà nổi bật</h4>
+          <p>Khám phá các mẫu thời trang hot nhất cho mùa hè năm nay.</p>
+          <a href="#">Xem thêm</a>
+        </div>
+      </div>
+      <div class="news-item">
+        <img src="images/phoiday.webp" alt="Cách phối đồ với giày trắng" loading="lazy">
+        <div class="news-content">
+          <h4>👟 Cách phối đồ với giày sneaker trắng</h4>
+          <p>Gợi ý những kiểu phối đồ trendy với đôi giày quốc dân – sneaker trắng!</p>
+          <a href="#">Xem thêm</a>
+        </div>
+      </div>
+      <div class="news-item">
+        <img src="images/5tip.jpg" alt="5 tips phối đồ nam" loading="lazy">
+        <div class="news-content">
+          <h4>🕴️ 5 tips phối đồ nam vừa lịch sự vừa cá tính</h4>
+          <p>5 mẹo phối đồ giúp bạn trở thành quý ông đích thực trong mắt mọi người.</p>
+          <a href="#">Xem thêm</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<hr class="g">
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>King Style</h3>
+      <p>Phong cách hoàng gia - Thời trang đỉnh cao</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h3>Liên hệ</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Đ.Trần Văn Ơn, Phú Hòa, TP. Thủ Dầu Một, Bình Dương</p>
+      <p><i class="fas fa-phone-alt"></i> 1900 1234</p>
+      <p><i class="fas fa-envelope"></i> kingstyle@gmail.com</p>
+    </div>
+    <div class="footer-column">
+      <h3>Hỗ trợ</h3>
+      <ul>
+        <li><a href="#">Hướng dẫn mua hàng</a></li>
+        <li><a href="#">Chính sách đổi trả</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Chính sách</h3>
+      <ul>
+        <li><a href="#">Điều khoản sử dụng</a></li>
+        <li><a href="#">Chính sách bảo mật</a></li>
+        <li><a href="#">Vận chuyển</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">&copy; <span id="yr"></span> KING STYLE</div>
+</footer>
+
+<script>
+'use strict';
+
+/* ── YEAR ── */
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ── TABS ── */
+window.showTab = function(e, id) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  if (e && e.target) e.target.classList.add('active');
+};
+
+/* ── CART ── */
+const cartCount = document.getElementById('cart-item-count');
+
+function getCart()      { return JSON.parse(localStorage.getItem('shoppingCart') || '[]'); }
+function saveCart(cart) { localStorage.setItem('shoppingCart', JSON.stringify(cart)); }
+
+function updateCartCount() {
+  if (!cartCount) return;
+  cartCount.textContent = getCart().reduce((n, i) => n + i.quantity, 0);
+}
+
+function addToCart(id, name, price, image, size) {
+  const cart = getCart();
+  const uid  = id + '_' + size;
+  const item = cart.find(i => i.productId + '_' + i.selectedSize === uid);
+  if (item) {
+    item.quantity++;
+  } else {
+    cart.push({ productId: id, name, price, imageUrl: image, selectedSize: size, quantity: 1 });
+  }
+  saveCart(cart);
+  updateCartCount();
+  alert(name + ' (Size: ' + size + ') đã được thêm vào giỏ hàng!');
+}
+
+/* ── ADD TO CART BUTTONS ── */
+document.querySelectorAll('.product-button').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const { id, name, price, image } = this.dataset;
+    const card = this.closest('.product-card');
+    const sizeInput = card && card.querySelector('input[name="size-' + id + '"]:checked');
+    const size = sizeInput ? sizeInput.value : 'N/A';
+    if (!id || !name || !price || !image) return;
+    addToCart(id, name, parseFloat(price), image, size);
+  });
+});
+
+updateCartCount();
+</script>
+</body>
+</html>
